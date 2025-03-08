@@ -66,20 +66,20 @@
             opacity: 0.9;
         }
 
-        .banner {
+       .banner {
             position: relative;
             border-radius: 30px;
             overflow: hidden;
-            margin-bottom: 40px; /* To accommodate the overlapping logo */
+            margin-bottom: 50px; /* Reduced to accommodate more logo overlap */
             box-shadow: var(--card-shadow);
         }
-
+        
         .banner-img {
             width: 100%;
             height: auto;
             display: block;
-        }
-
+        }       
+        
         .overlay-text {
             position: absolute;
             bottom: 0;
@@ -91,16 +91,15 @@
             text-align: center;
         }
 
-        
+        /* Modified profile-img class */
         .profile-img {
-            /* Keep most of your existing styles */
             width: 200px;
             height: 200px;
             border-radius: 50%;
             margin: 0 auto;
             position: relative;
-            top: -100px; /* Half the height, to position it halfway over the banner */
-            margin-bottom: -100px; /* Counteract the negative top positioning */
+            top: -130px; /* Increased negative value to move it more upward */
+            margin-bottom: -130px; /* Match this to the top value */
             border: 5px solid white;
             box-shadow: var(--card-shadow);
             display: flex;
@@ -109,7 +108,7 @@
             background-color: white;
             overflow: hidden;
             transition: transform var(--transition-speed);
-            z-index: 10; /* Ensure it's above the banner */
+            z-index: 10;
         }
         
         .profile-img:hover {
@@ -126,7 +125,7 @@
             display: flex;
             justify-content: center;
             gap: 25px;
-            margin: 90px 0 40px 0;
+            margin: 350px 0 40px 0;
         }
         
         .social-icon {
