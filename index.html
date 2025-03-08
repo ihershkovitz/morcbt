@@ -50,6 +50,8 @@
             box-shadow: var(--card-shadow);
             text-align: center;
         }
+
+        
         
         .title {
             font-size: 2.2rem;
@@ -63,14 +65,42 @@
             margin-top: 8px;
             opacity: 0.9;
         }
+
+        .banner {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            margin-bottom: 70px; /* To accommodate the overlapping logo */
+            box-shadow: var(--card-shadow);
+        }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .overlay-text {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(to top, rgba(142, 68, 173, 0.9), transparent);
+            padding: 40px 20px 20px;
+            color: var(--light-text);
+            text-align: center;
+        }
+
         
         .profile-img {
+            /* Keep most of your existing styles */
             width: 200px;
             height: 200px;
             border-radius: 50%;
             margin: 0 auto;
             position: relative;
-            top: 50px;
+            top: -100px; /* Half the height, to position it halfway over the banner */
+            margin-bottom: -100px; /* Counteract the negative top positioning */
             border: 5px solid white;
             box-shadow: var(--card-shadow);
             display: flex;
@@ -79,6 +109,7 @@
             background-color: white;
             overflow: hidden;
             transition: transform var(--transition-speed);
+            z-index: 10; /* Ensure it's above the banner */
         }
         
         .profile-img:hover {
@@ -543,9 +574,12 @@
     </style>
 </head>
 <body>
-    <div class="title-card">
-        <div class="title">מור הרשקוביץ</div>
-        <div class="subtitle">מטפלת פסיכולוגית לילדים ונוער</div>
+    <div class="banner">
+        <img src="banner.jpg" alt="מור הרשקוביץ - מטפלת פסיכולוגית לילדים ונוער" class="banner-img">
+        <div class="overlay-text">
+            <div class="title">מור הרשקוביץ</div>
+            <div class="subtitle">מטפלת פסיכולוגית לילדים ונוער</div>
+        </div>
     </div>
     
     <div class="profile-img">
