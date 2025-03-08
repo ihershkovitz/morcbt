@@ -70,15 +70,16 @@
             position: relative;
             border-radius: 30px;
             overflow: hidden;
-            margin-bottom: 60px; /* Reduced to accommodate more logo overlap */
+            margin-bottom: 40px; /* Reduced significantly */
             box-shadow: var(--card-shadow);
+            animation: fadeInUp 0.8s ease forwards;
         }
         
         .banner-img {
             width: 100%;
             height: auto;
             display: block;
-        }       
+        }      
         
         .overlay-text {
             position: absolute;
@@ -93,13 +94,13 @@
 
         /* Modified profile-img class */
         .profile-img {
-            width: 300px;
-            height: 300px;
+            width: 180px; /* Slightly smaller for better mobile view */
+            height: 180px;
             border-radius: 50%;
             margin: 0 auto;
             position: relative;
-            top: -100px; /* Increased negative value to move it more upward */
-            margin-bottom: -100px; /* Match this to the top value */
+            top: -100px; /* Move it up onto the banner */
+            margin-bottom: -80px; /* Reduce the gap after the logo */
             border: 5px solid white;
             box-shadow: var(--card-shadow);
             display: flex;
@@ -109,6 +110,8 @@
             overflow: hidden;
             transition: transform var(--transition-speed);
             z-index: 10;
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: 0.2s;
         }
         
         .profile-img:hover {
@@ -125,9 +128,11 @@
             display: flex;
             justify-content: center;
             gap: 25px;
-            margin: 350px 0 40px 0;
+            margin: 0 0 30px 0; /* Significantly reduced top margin */
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: 0.4s;
         }
-        
+                
         .social-icon {
             width: 60px;
             height: 60px;
@@ -507,19 +512,52 @@
             .card-title, .overlay-title {
                 font-size: 1.6rem;
             }
-            
+
+             .banner {
+                margin-bottom: 30px;
+            }
+        
             .profile-img {
-                width: 160px;
-                height: 160px;
-                top: 40px;
+                width: 150px;
+                height: 150px;
+                top: -80px;
+                margin-bottom: -60px;
             }
             
             .social-icons {
-                margin-top: 80px;
+                margin: 0 0 20px 0;
+                gap: 20px;
             }
+        }
+
+        /* Mobile responsiveness improvements */
+        @media (max-width: 768px) {
+           
         }
         
         @media (max-width: 480px) {
+            .banner {
+                margin-bottom: 25px;
+            }
+        
+            .profile-img {
+                width: 120px;
+                height: 120px;
+                top: -65px;
+                margin-bottom: -45px;
+            }
+            
+            .social-icons {
+                margin: 0 0 15px 0;
+                gap: 15px;
+            }
+            
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+            
             .title {
                 font-size: 1.5rem;
             }
@@ -534,22 +572,6 @@
             
             .overlay-title {
                 font-size: 1.5rem;
-            }
-            
-            .profile-img {
-                width: 130px;
-                height: 130px;
-                top: 50px;
-            }
-            
-            .social-icons {
-                margin-top: 70px;
-                gap: 15px;
-            }
-            
-            .social-icon {
-                width: 50px;
-                height: 50px;
             }
             
             .social-icon img {
