@@ -268,7 +268,7 @@
         .about-card {
             cursor: pointer;
         }
-        
+        /*
         .about-content {
             max-height: 0;
             overflow: hidden;
@@ -285,13 +285,14 @@
         }
         
        .about-content p {
-            margin-bottom: 10px; /* Reduced from 15px */
-            line-height: 1.5; /* Reduced from 1.8 */
+            margin-bottom: 10px;
+            line-height: 1.5; 
         }
         
         .about-content p:last-child {
             margin-bottom: 0;
         }
+        */
         
         .expandable-indicator {
             display: inline-block;
@@ -739,12 +740,12 @@
         </div>
     </div>
 
-    <div class="card about-card" id="aboutCard">
+    <div class="card about-cardOld" id="aboutCardOld" hidden>
         <div class="card-title">אודות</div>
         <div class="expandable-indicator">
             <i class="fas fa-chevron-down"></i>
         </div>
-        <div class="about-content" id="aboutContent">
+        <div class="about-content-old" id="aboutContentOld">
             <p>פסיכותרפיסטית התנהגותית קוגניטיבית לילדים ונוער, בוגרת התוכנית הישראלית לטיפול התנהגותי קוגניטיבי, תוכנית בחסות אוניברסיטת בר אילן והאגודה הישראלית לטיפול התנהגותי-קוגניטיבי (איט"ה).</p>
             <p>יועצת חינוכית M.A, אוניברסיטת תל-אביב.</p>
             <p>מטפלת בהפרעות חרדה ופחדים, קושי במיומנויות חברתיות, ערך עצמי מונמך, קשיי ויסות רגשי וחושי. 
@@ -752,6 +753,10 @@
             <p>התפיסה שעומדת בבסיס הגישה ההתנהגותית קוגניטיבית טוענת שמרבית הקשיים הפסיכולוגיים נובעים מדפוסי חשיבה שגויים ולא אפקטיביים ומהתנהגות נלמדת שניתן לשנות באמצעות רכישת כלים חדשים ותרגולים.
             הרעיון בגישת טיפול Cognitive Behavioral Therapy הוא שכדי ליצור שינוי אצל המטופל, יש צורך בשינוי תפיסת המציאות (טיפול קוגניטיבי) לצד צורך בלמידה ובתרגול של התנהגויות חדשות (טיפול התנהגותי). לכולנו יש דפוסים והרגלים המשפיעים על האופן שבו אנו חושבים, מרגישים ומתנהגים בכל סיטואציה. טיפול ממוקד סביב שינוי דפוסי הפרשנות וההתנהגות, יאפשר לנו לסגל פתרון חדש ולהתמודד עם הקושי שהגדרנו.</p>       
         </div>
+    </div>
+
+    <div class="card" id="aboutCard">
+        <div class="card-title">אודות</div>
     </div>
 
     <div class="card" id="expertiseCard">
@@ -764,6 +769,22 @@
 
     <div class="card" id="contactFormCard">
         <div class="card-title">צור קשר</div>
+    </div>
+
+    <!-- About Overlay -->
+    <div class="overlay" id="aboutOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" id="closeAbout">&times;</button>
+            <div class="overlay-title">אודות</div>
+            <div class="about-content" id="aboutContent">
+                <p>פסיכותרפיסטית התנהגותית קוגניטיבית לילדים ונוער, בוגרת התוכנית הישראלית לטיפול התנהגותי קוגניטיבי, תוכנית בחסות אוניברסיטת בר אילן והאגודה הישראלית לטיפול התנהגותי-קוגניטיבי (איט"ה).</p>
+                <p>יועצת חינוכית M.A, אוניברסיטת תל-אביב.</p>
+                <p>מטפלת בהפרעות חרדה ופחדים, קושי במיומנויות חברתיות, ערך עצמי מונמך, קשיי ויסות רגשי וחושי. 
+                שיטת הטיפול העיקרית היא השיטה הקוגניטיבית התנהגותית (CBT) המתמקדת במחשבות לא יעילות ושיפור התפקוד ההתנהגותי תוך עבודה על ויסות הרגש באמצעות מגוון כלים חווייתיים.</p>
+                <p>התפיסה שעומדת בבסיס הגישה ההתנהגותית קוגניטיבית טוענת שמרבית הקשיים הפסיכולוגיים נובעים מדפוסי חשיבה שגויים ולא אפקטיביים ומהתנהגות נלמדת שניתן לשנות באמצעות רכישת כלים חדשים ותרגולים.
+                הרעיון בגישת טיפול Cognitive Behavioral Therapy הוא שכדי ליצור שינוי אצל המטופל, יש צורך בשינוי תפיסת המציאות (טיפול קוגניטיבי) לצד צורך בלמידה ובתרגול של התנהגויות חדשות (טיפול התנהגותי). לכולנו יש דפוסים והרגלים המשפיעים על האופן שבו אנו חושבים, מרגישים ומתנהגים בכל סיטואציה. טיפול ממוקד סביב שינוי דפוסי הפרשנות וההתנהגות, יאפשר לנו לסגל פתרון חדש ולהתמודד עם הקושי שהגדרנו.</p> 
+            </div>
+        </div>
     </div>
 
     <!-- Expertise Overlay -->
@@ -867,9 +888,21 @@
     </div>
 
     <script>
-        // About card toggle
+        /* About card toggle
         document.getElementById('aboutCard').addEventListener('click', function() {
             this.classList.toggle('expanded');
+        });
+        */
+
+        // About Overlay
+        document.getElementById('aboutCard').addEventListener('click', function() {
+            document.getElementById('aboutOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        document.getElementById('closeAbout').addEventListener('click', function() {
+            document.getElementById('aboutOverlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
         });
         
         // Expertise Overlay
@@ -960,10 +993,17 @@
         });
 
         // Add this to your existing script section
+        /*
         document.getElementById('aboutNav').addEventListener('click', function() {
             document.getElementById('aboutCard').classList.toggle('expanded');
             // Scroll to the about card
             document.getElementById('aboutCard').scrollIntoView({behavior: 'smooth'});
+        });
+        */
+
+        document.getElementById('aboutNav').addEventListener('click', function() {
+            document.getElementById('aboutOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
         
         document.getElementById('expertiseNav').addEventListener('click', function() {
