@@ -364,28 +364,23 @@
         
         .close-btn {
             position: absolute;
-            top: 15px;
-            left: 15px;
+            top: 10px;
+            left: 10px;
             background: none;
             border: none;
             font-size: 28px;
             cursor: pointer;
+            width: 30px;
+            height: 30px;
             color: var(--dark-text);
-            transition: transform var(--transition-speed), color var(--transition-speed);
-            width: 40px;
-            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
+            padding: 0; /* Ensure no padding affects the clickable area */
+            box-sizing: border-box; /* Ensure dimensions include border and padding */
         }
-        
-        .close-btn:hover {
-            transform: rotate(90deg);
-            color: var(--primary-color);
-            background-color: rgba(0, 0, 0, 0.05);
-        }
-        
+
         .contact-details {
             display: flex;
             flex-direction: column;
@@ -431,20 +426,20 @@
         
         /* Form styles */
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 10px;
             text-align: right;
         }
         
         .form-label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             font-weight: bold;
             color: var(--primary-color);
         }
         
         .form-input, .form-textarea {
             width: 100%;
-            padding: 15px;
+            padding: 10px;
             border: 2px solid #e0e0e0;
             border-radius: 10px;
             background-color: var(--background);
@@ -774,7 +769,12 @@
     <!-- About Overlay -->
     <div class="overlay" id="aboutOverlay">
         <div class="overlay-content">
-            <button class="close-btn" id="closeAbout">&times;</button>
+            <button class="close-btn" id="closeAbout">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
             <div class="overlay-title">אודות</div>
             <div class="about-content" id="aboutContent">
                 <p>פסיכותרפיסטית התנהגותית קוגניטיבית לילדים ונוער, בוגרת התוכנית הישראלית לטיפול התנהגותי קוגניטיבי, תוכנית בחסות אוניברסיטת בר אילן והאגודה הישראלית לטיפול התנהגותי-קוגניטיבי (איט"ה).</p>
@@ -790,7 +790,12 @@
     <!-- Expertise Overlay -->
     <div class="overlay" id="expertiseOverlay">
         <div class="overlay-content">
-            <button class="close-btn" id="closeExpertise">&times;</button>
+            <button class="close-btn" id="closeExpertise">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
             <div class="overlay-title">תחומי התמחות</div>
             <div class="expertise-list">
                 <div class="expertise-item">
@@ -835,7 +840,12 @@
     <!-- Contact Details Overlay -->
     <div class="overlay" id="contactDetailsOverlay">
         <div class="overlay-content">
-            <button class="close-btn" id="closeContactDetails">&times;</button>
+            <button class="close-btn" id="closeContactDetails">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
             <div class="overlay-title">פרטי התקשרות</div>
             <div class="contact-details">
                 <a href="tel:+972523367127" class="contact-item">
@@ -863,7 +873,12 @@
     <!-- Contact Form Overlay -->
     <div class="overlay" id="contactFormOverlay">
         <div class="overlay-content">
-            <button class="close-btn" id="closeContactForm">&times;</button>
+            <button class="close-btn" id="closeContactForm">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
             <div class="overlay-title">שליחת הודעה</div>
             <form id="contactForm">
                 <div class="form-group">
@@ -882,7 +897,7 @@
                     <label class="form-label">הודעה</label>
                     <textarea class="form-textarea" name="message" required></textarea>
                 </div>
-                <button type="submit" class="form-button">שלח הודעה</button>
+                <center><button type="submit" class="form-button">שלח הודעה</button></center>
             </form>
         </div>
     </div>
