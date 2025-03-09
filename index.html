@@ -957,5 +957,27 @@
             // You would normally send the form data to a server here
             // For demonstration, we're showing an alert
             // alert('ההודעה נשלחה בהצלחה!');
+
+            // Add this to your existing script section
+            document.getElementById('aboutNav').addEventListener('click', function() {
+                document.getElementById('aboutCard').classList.toggle('expanded');
+                // Scroll to the about card
+                document.getElementById('aboutCard').scrollIntoView({behavior: 'smooth'});
+            });
+            
+            document.getElementById('expertiseNav').addEventListener('click', function() {
+                document.getElementById('expertiseOverlay').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            document.getElementById('contactDetailsNav').addEventListener('click', function() {
+                document.getElementById('contactDetailsOverlay').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            document.getElementById('contactFormNav').addEventListener('click', function() {
+                document.getElementById('contactFormOverlay').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
         });
     </script>
