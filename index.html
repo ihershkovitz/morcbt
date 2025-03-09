@@ -613,6 +613,29 @@
                 padding: 14px 30px;
                 font-size: 16px;
             }
+
+            .contact-item {
+                padding: 15px 10px; /* Reduce padding */
+                gap: 10px; /* Reduce gap between icon and text */
+            }
+            
+            /* Make icon smaller */
+            .contact-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            /* Adjust text size for better fit */
+            .contact-text {
+                font-size: 0.8rem; /* Smaller font size */
+                letter-spacing: -0.5px; /* Slight negative letter spacing */
+            }
+            
+            /* Specifically for the email contact item */
+            .contact-details a:nth-child(2) .contact-text {
+                font-size: 0.75rem; /* Even smaller for email */
+            }
         }
     </style>
 </head>
