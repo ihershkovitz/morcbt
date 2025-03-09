@@ -235,25 +235,39 @@
             transition: max-height 0.7s ease, opacity 0.7s ease 0.2s;
         }
         
-        .about-content p {
-            margin-bottom: 15px;
-            line-height: 1.8;
+       .about-content p {
+            margin-bottom: 10px; /* Reduced from 15px */
+            line-height: 1.5; /* Reduced from 1.8 */
         }
         
         .about-content p:last-child {
             margin-bottom: 0;
         }
         
-        /* Arrow indicator for expandable cards */
         .expandable-indicator {
             display: inline-block;
-            margin-top: 5px;
+            margin-top: 10px;
             color: var(--primary-color);
             transition: transform var(--transition-speed);
+            font-size: 18px; /* Increased size */
+            padding: 5px 10px; /* Added padding */
+            background-color: var(--light-accent); /* Added background */
+            border-radius: 50%; /* Make it circular */
+            width: 38px; /* Set fixed width */
+            height: 38px; /* Set fixed height */
+            display: flex; /* For centering */
+            align-items: center;
+            justify-content: center;
+            margin: 10px auto 0; /* Center it and add space above */
         }
         
         .about-card.expanded .expandable-indicator {
             transform: rotate(180deg);
+        }
+
+        .expandable-indicator:hover {
+            background-color: rgba(142, 68, 173, 0.1); /* Hover effect */
+            transform: scale(1.1); /* Slight grow on hover */
         }
         
         /* Overlay styles */
