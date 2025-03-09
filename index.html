@@ -58,8 +58,6 @@
             box-shadow: var(--card-shadow);
             text-align: center;
         }
-
-        
         
         .title {
             font-size: 2.2rem;
@@ -100,7 +98,6 @@
             text-align: center;
         }
 
-        /* Modified profile-img class */
         .profile-img {
             width: 180px; /* Slightly smaller for better mobile view */
             height: 180px;
@@ -155,6 +152,50 @@
             box-shadow: var(--card-shadow);
             transition: transform var(--transition-speed), box-shadow var(--transition-speed);
             position: relative;
+        }
+
+        .section-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 0 0 30px 0;
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .section-icon {
+            width: 70px;
+            height: 80px;
+            border-radius: 15px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            text-decoration: none;
+            box-shadow: var(--card-shadow);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+            position: relative;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .section-icon i {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            text-align: center;
+            color: var(--dark-text);
+        }
+
+        .section-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+            background-color: var(--light-accent);
         }
         
         .social-icon img {
@@ -278,7 +319,6 @@
             transform: scale(1.1); /* Slight grow on hover */
         }
         
-        /* Overlay styles */
         .overlay {
             position: fixed;
             top: 0;
@@ -345,7 +385,6 @@
             background-color: rgba(0, 0, 0, 0.05);
         }
         
-        /* Contact details overlay content */
         .contact-details {
             display: flex;
             flex-direction: column;
@@ -579,6 +618,23 @@
                 height: 45px;
                 font-size: 20px;
             }
+
+            .section-icons {
+                gap: 10px;
+            }
+            
+            .section-icon {
+                width: 60px;
+                height: 70px;
+            }
+            
+            .section-icon i {
+                font-size: 20px;
+            }
+            
+            .section-label {
+                font-size: 0.7rem;
+            }
             
             .title {
                 font-size: 1.3rem;
@@ -662,6 +718,25 @@
         <a href="tel:+972523367127" class="social-icon" aria-label="Phone Call">
             <i class="fas fa-phone-alt"></i>
         </a>
+    </div>
+
+    <div class="section-icons">
+        <div class="section-icon" id="aboutNav">
+            <i class="fas fa-user"></i>
+            <span class="section-label">אודות</span>
+        </div>
+        <div class="section-icon" id="expertiseNav">
+            <i class="fas fa-list-check"></i>
+            <span class="section-label">התמחויות</span>
+        </div>
+        <div class="section-icon" id="contactDetailsNav">
+            <i class="fas fa-address-card"></i>
+            <span class="section-label">פרטים</span>
+        </div>
+        <div class="section-icon" id="contactFormNav">
+            <i class="far fa-paper-plane"></i>
+            <span class="section-label">צור קשר</span>
+        </div>
     </div>
 
     <div class="card about-card" id="aboutCard">
