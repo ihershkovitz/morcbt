@@ -245,6 +245,14 @@
             overflow: hidden;
             text-align: center;
         }
+
+        .card i {
+            position: absolute;
+            right: 5%; /* Adjust as needed */
+            top: 50%; /* Adjust as needed */
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+        }
         
         .card::before {
             content: '';
@@ -720,6 +728,7 @@
         </a>
     </div>
 
+    <!--
     <div class="section-icons">
         <div class="section-icon" id="aboutNav">
             <i class="fas fa-user"></i>
@@ -738,7 +747,9 @@
             <span class="section-label">צור קשר</span>
         </div>
     </div>
+    
 
+    <!--Old About Card
     <div class="card about-cardOld" id="aboutCardOld" hidden>
         <div class="card-title">אודות</div>
         <div class="expandable-indicator">
@@ -753,20 +764,25 @@
             הרעיון בגישת טיפול Cognitive Behavioral Therapy הוא שכדי ליצור שינוי אצל המטופל, יש צורך בשינוי תפיסת המציאות (טיפול קוגניטיבי) לצד צורך בלמידה ובתרגול של התנהגויות חדשות (טיפול התנהגותי). לכולנו יש דפוסים והרגלים המשפיעים על האופן שבו אנו חושבים, מרגישים ומתנהגים בכל סיטואציה. טיפול ממוקד סביב שינוי דפוסי הפרשנות וההתנהגות, יאפשר לנו לסגל פתרון חדש ולהתמודד עם הקושי שהגדרנו.</p>       
         </div>
     </div>
+    -->
 
     <div class="card" id="aboutCard">
+        <i class="fas fa-user"></i>
         <div class="card-title">אודות</div>
     </div>
 
     <div class="card" id="expertiseCard">
+        <i class="fas fa-list-check"></i>
         <div class="card-title">תחומי התמחות</div>
     </div>
 
     <div class="card" id="contactDetailsCard">
+        <i class="fas fa-address-card"></i>
         <div class="card-title">פרטי התקשרות</div>
     </div>
 
     <div class="card" id="contactFormCard">
+        <i class="far fa-paper-plane"></i>
         <div class="card-title">צור קשר</div>
     </div>
 
