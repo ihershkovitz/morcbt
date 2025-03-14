@@ -24,12 +24,10 @@
             <div class="title">מור הרשקוביץ</div>
             <div class="subtitle">פסיכותרפיסטית לילדים ונוער</div>
         </div>
-    </div>
-    
+    </div>    
     <div class="profile-img">
         <img src="logo/logo_2-round.png" alt="מור הרשקוביץ - CBT" class="icon-img">
-    </div>
-    
+    </div>    
     <div class="social-icons">
         <a href="https://wa.me/972523367127" class="social-icon" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
@@ -219,7 +217,7 @@
                 </svg>
             </button>
             <div class="overlay-title">שליחת הודעה</div>
-            <form id="contactForm">
+            <form id="contactForm" action="submit_form.php" method="post">
                 <div class="form-group">
                     <label class="form-label">שם מלא</label>
                     <input type="text" class="form-input" name="name" required>
@@ -236,7 +234,9 @@
                     <label class="form-label">הודעה</label>
                     <textarea class="form-textarea" name="message" required></textarea>
                 </div>
-                <center><button type="submit" class="form-button">שלח הודעה</button></center>
+                <div class="form-button-container">
+                    <button type="submit" class="form-button">שלח הודעה</button>
+                </div>
             </form>
         </div>
     </div>
