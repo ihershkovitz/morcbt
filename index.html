@@ -12,14 +12,18 @@
     <meta property="og:url" content="https://mor-cbt.com">
     <meta property="og:type" content="website">
 
+    <link rel="canonical" href="https://mor-cbt.com/">
     <title>מור הרשקוביץ - פסיכותרפיסטית לילדים - טיפול קוגניטיבי התנהגותי (CBT) לילדים ונוער</title>
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; frame-src https://www.google.com; form-action https://formspree.io;">
 
     <!-- Preconnect hints for performance -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     
     <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
@@ -66,8 +70,8 @@
     </div>
 
     <div class="banner">
-        <!-- Replaced SVG with JPG for performance -->
-        <img src="banner/banner_new.jpg" alt="מור הרשקוביץ - פסיכותרפיסטית לילדים ונוער" class="banner-img" loading="lazy">
+        <!-- Replaced SVG with JPG for performance, fetch priority high for LCP -->
+        <img src="banner/banner_new.jpg" alt="מור הרשקוביץ - פסיכותרפיסטית לילדים ונוער" class="banner-img" fetchpriority="high" loading="eager">
         <div class="overlay-text" hidden>
             <h1 class="title">מור הרשקוביץ</h1>
             <div class="subtitle">פסיכותרפיסטית לילדים ונוער</div>
@@ -254,20 +258,20 @@
             <!-- Placeholder formspree link, we will ask user to replace it with real one if needed, or leave it. -->
             <form id="contactForm" action="https://formspree.io/f/mqazkkwv" method="POST">
                 <div class="form-group">
-                    <label class="form-label">שם מלא</label>
-                    <input type="text" class="form-input" name="name" required>
+                    <label class="form-label" for="contactName">שם מלא</label>
+                    <input type="text" class="form-input" id="contactName" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">טלפון</label>
-                    <input type="tel" class="form-input" name="phone" required>
+                    <label class="form-label" for="contactPhone">טלפון</label>
+                    <input type="tel" class="form-input" id="contactPhone" name="phone" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">אימייל</label>
-                    <input type="email" class="form-input" name="email" required>
+                    <label class="form-label" for="contactEmail">אימייל</label>
+                    <input type="email" class="form-input" id="contactEmail" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">הודעה</label>
-                    <textarea class="form-textarea" name="message" required></textarea>
+                    <label class="form-label" for="contactMessage">הודעה</label>
+                    <textarea class="form-textarea" id="contactMessage" name="message" required></textarea>
                 </div>
                 <div class="form-button-container">
                     <button type="submit" class="form-button">שלח הודעה</button>
