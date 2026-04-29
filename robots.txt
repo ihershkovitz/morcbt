@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mor-cbt.com/sitemap.xml
